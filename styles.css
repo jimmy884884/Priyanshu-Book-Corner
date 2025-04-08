@@ -1,0 +1,193 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #E8F5E9;
+    color: #4E342E;
+}
+
+header {
+    background: #8D6E63;
+    color: #fff;
+    padding: 20px 0;
+    border-bottom: 5px solid #A1887F;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-family: 'Sacramento', cursive;
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFD54F;
+}
+
+.hero {
+    background-image: url('hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+.search-bar {
+    margin-top: 20px;
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    border: none;
+    border-radius: 5px;
+}
+
+.carousel {
+    padding: 20px;
+    text-align: center;
+    background-color: #D7CCC8;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    width: 300px;
+    margin: 10px;
+    border: 1px solid #BCAAA4;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #FFE0B2;
+    scroll-snap-align: start;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.categories {
+    padding: 20px;
+    background-color: #F5F5F5;
+    text-align: center;
+}
+
+.category {
+    margin: 15px;
+    padding: 10px;
+    border: 1px solid #BCAAA4;
+    border-radius: 10px;
+    background-color: #C8E6C9;
+}
+
+.testimonials {
+    padding: 20px;
+    background-color: #F5F5F5;
+    text-align: center;
+}
+
+.testimonial {
+    margin: 15px;
+    padding: 10px;
+    border: 1px solid #BCAAA4;
+    border-radius: 10px;
+    background-color: #FFCCBC;
+}
+
+footer {
+    background: #4E342E;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        width: 45%;
+    }
+
+    .search-bar {
+        width: 90%;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-item {
+        width: 100%;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+}
